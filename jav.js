@@ -4,6 +4,7 @@ let cols =15;
 var board;
 var context;
 
+var num;
 // Snake
 var snakeX = blockSize * 5;
 var snakeY = blockSize * 5;
@@ -50,9 +51,15 @@ function update(){
     context.fillStyle = "yellow";
     context.fillRect(foodX , foodY , blockSize , blockSize );
 
-    if(snakeX == foodX && snakeY == foodY){
+    if(snakeX == foodX && snakeY == foodY){          
         snakeBody.push([foodX , foodY])
         placeFood()
+
+        //score
+        var score = parseInt(document.querySelector('#score').innerText)
+         num=score+10
+        document.querySelector('#score').innerText = num;
+        //
     }
     
     //نکته:برای اینکه قسمت باختن هنگام خوردن به خود مار رخ دهد باید فور و ایف قبل از کد ساخته شدن دم مار باشد
@@ -80,7 +87,7 @@ function update(){
        for(let i=0 ; i<snakeBody.length ; i++){
         if(snakeX==snakeBody[i][0] && snakeY==snakeBody[i][1]){
             gameOver = true;
-            alert("Game Over")
+            alert(`Game Over \n Score: ${num}`)
             location.reload();
         }
     }
