@@ -1,0 +1,14 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(253, 251, 251, 0.498);
+}
+.board{
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px grey;
+}
+h5{
+    color: white;
+}
