@@ -8,6 +8,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
+    touch-action: none;
 }
 .board{
     border-radius: 5px;
