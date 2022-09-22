@@ -142,9 +142,30 @@ function placeFood(){
 }
 
 
-document.addEventListener('swiped-right', function(e) {
-    alert('jjj')
-});
+var startingX , startingY , movingX , movingY;
+function touchstart(evt){
+    startingX = evt.touches[0].clientX;
+    startingY = evt.touches[0].clientY;
+}
 
+function touchmove(evt){
+    movingX = evt.touches[0].clientX;
+    movingY = evt.touches[0].clientY;
+}
+
+function touchend(){
+    if(startingX+100 < movingX){
+        alert('right')
+    }
+    else if(startingX-100 < movingX){
+        alert('left')
+    }
+    if(startingY+100 < movingY){
+        alert('down')
+    }
+    else if(startingY-100 < movingY){
+        alert('up')
+    }
+}
 
 
