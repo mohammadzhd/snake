@@ -16,5 +16,7 @@ body{
     box-shadow: 0 0 5px 5px grey;
 }
 h5{
+    position: absolute;
     color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

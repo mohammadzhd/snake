@@ -1,6 +1,6 @@
 let blockSize = 25 ;
-let rows = 20;
-let cols =20;
+let rows = 15;
+let cols =15;
 var board;
 var context;
 
@@ -95,15 +95,15 @@ function update(){
 
     //model 2
     if(snakeX == -25){
-        snakeX= 500
+        snakeX= 375
     }
-    else if(snakeX == 500){
+    else if(snakeX == 375){
         snakeX= -25
     }
     else if(snakeY == -25){
-        snakeY= 500
+        snakeY= 375
     }
-    else if(snakeY == 500){
+    else if(snakeY == 375){
         snakeY= -25
     }
     //
@@ -136,8 +136,8 @@ function moveSnake(e){
 
 
 function placeFood(){
-    foodX = Math.floor(Math.random()*20) * 25;
-    foodY = Math.floor(Math.random()*20) * 25;
+    foodX = Math.floor(Math.random()*15) * 25;
+    foodY = Math.floor(Math.random()*15) * 25;
     
 }
 
@@ -154,19 +154,19 @@ function touchmove(evt){
 }
 
 function touchend(){
-    if(startingX+100 < movingX){
+    if(startingX+100 < movingX && goX == !-1){
         goX = 1;
         goY = 0;
     }
-    else if(startingX-100 > movingX){
+    else if(startingX-100 > movingX && goX == !1){
         goX = -1;
         goY = 0;
     }
-    if(startingY+100 < movingY){
+    if(startingY+100 < movingY && goY == !-1){
         goX = 0;
         goY = 1;
     }
-    else if(startingY-100 > movingY){
+    else if(startingY-100 > movingY && goY == !1){
         goX = 0;
         goY = -1;
     }
