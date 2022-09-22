@@ -155,17 +155,48 @@ function touchmove(evt){
 
 function touchend(){
     if(startingX+100 < movingX){
-        alert('right')
+        goX = 1;
+        goY = 0;
     }
     else if(startingX-100 > movingX){
-        alert('left')
+        goX = -1;
+        goY = 0;
     }
     if(startingY+100 < movingY){
-        alert('down')
+        goX = 0;
+        goY = 1;
     }
     else if(startingY-100 > movingY){
-        alert('up')
+        goX = 0;
+        goY = -1;
     }
 }
+
+
+// var startingX , startingY , movingX , movingY;
+// function touchstart(evt){
+//     startingX = evt.touches[0].clientX;
+//     startingY = evt.touches[0].clientY;
+// }
+
+// function touchmove(evt){
+//     movingX = evt.touches[0].clientX;
+//     movingY = evt.touches[0].clientY;
+// }
+
+// function touchend(){
+//     if(startingX+100 < movingX){
+//         alert('right')
+//     }
+//     else if(startingX-100 > movingX){
+//         alert('left')
+//     }
+//     if(startingY+100 < movingY){
+//         alert('down')
+//     }
+//     else if(startingY-100 > movingY){
+//         alert('up')
+//     }
+// }
 
 
