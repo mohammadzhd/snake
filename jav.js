@@ -157,13 +157,13 @@ function touchend(){
     if(startingX+100 < movingX){
         alert('right')
     }
-    else if(startingX-100 < movingX){
+    else if(startingX-100 > movingX){
         alert('left')
     }
     if(startingY+100 < movingY){
         alert('down')
     }
-    else if(startingY-100 < movingY){
+    else if(startingY-100 > movingY){
         alert('up')
     }
 }
