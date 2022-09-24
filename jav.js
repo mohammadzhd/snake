@@ -161,19 +161,19 @@ function touchmove(evt){
 }
 
 function touchend(){
-    if(startingX+100 < movingX && goX == !-1){
+    if(startingX+50 < movingX && goX == !-1){
         goX = 1;
         goY = 0;
     }
-    else if(startingX-100 > movingX && goX == !1){
+    else if(startingX-50 > movingX && goX == !1){
         goX = -1;
         goY = 0;
     }
-    if(startingY+100 < movingY && goY == !-1){
+    if(startingY+50 < movingY && goY == !-1){
         goX = 0;
         goY = 1;
     }
-    else if(startingY-100 > movingY && goY == !1){
+    else if(startingY-50 > movingY && goY == !1){
         goX = 0;
         goY = -1;
     }
